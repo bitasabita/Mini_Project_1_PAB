@@ -95,6 +95,11 @@ Tampilan header menggunakan Container dengan BoxDecoration dan LinearGradient un
 Halaman ini digunakan untuk menginput data itinerary.  
 Menggunakan TextField untuk tanggal, waktu, aktivitas dan DropdownButtonFormField untuk memilih status perjalanan.
 
+Halaman ini merupakan Form Tambah Itinerary yang digunakan untuk menginput data perjalanan baru.
+Pengguna dapat mengisi Hari/Tanggal, Waktu, dan Aktivitas menggunakan TextField, serta memilih Status perjalanan (Planned/Done) melalui DropdownButtonFormField.
+Setelah semua data diisi, pengguna dapat menekan tombol Simpan untuk menyimpan itinerary.
+Data kemudian akan dikirim kembali ke Home Page menggunakan Navigator.pop() dan ditampilkan dalam daftar itinerary. Form ini juga menggunakan TextEditingController untuk mengelola input dan setState() untuk memperbarui tampilan ketika data berubah.
+
 </div>
 
 </details>
@@ -137,6 +142,18 @@ Data dikirim dari HomePage melalui Navigator.push().
 Fitur edit memungkinkan pengguna memperbarui data itinerary yang sudah ada.  
 Data lama akan otomatis terisi pada form karena menggunakan TextEditingController dan initState().
 
+Halaman ini menampilkan daftar itinerary yang sudah ditambahkan. Setiap item ditampilkan dalam bentuk card yang berisi hari/tanggal, waktu, aktivitas, serta status perjalanan (Planned/Done).Untuk memperbarui data, pengguna dapat menekan icon pena (✏️) pada bagian kanan card. Data lama akan otomatis terisi di halaman form karena menggunakan TextEditingController dan diinisialisasi melalui initState(). Setelah perubahan disimpan, data akan diperbarui menggunakan setState() sehingga tampilan daftar langsung berubah tanpa perlu memuat ulang halaman.
+
+
+<img width="524" height="599" alt="image" src="https://github.com/user-attachments/assets/7875c108-3c98-4b54-9221-b384a1bb762d" />
+
+<br><br>
+
+<b>Tampilan setelah di edit:</b>  
+
+Setelah melakukan edit dan klik simpan, daftar akan berubah sesuai input yang dimasukkan saat mengedit. Contohnya pada tampilan di atas mengubah aktifitas "Berenang" menjadi "Breakfast"
+
+
 </div>
 
 </details>
@@ -157,6 +174,8 @@ Data lama akan otomatis terisi pada form karena menggunakan TextEditingControlle
 <b>Penjelasan:</b>  
 Fitur delete memungkinkan pengguna menghapus itinerary dari daftar.  
 Data dihapus dari List menggunakan removeAt() dan tampilan diperbarui dengan setState().
+
+Fitur delete memungkinkan pengguna menghapus itinerary yang sudah tidak diperlukan dari daftar. Untuk menghapus data, pengguna dapat menekan icon tempat sampah (🗑️) yang terdapat pada setiap card itinerary. Data akan dihapus dari List menggunakan method removeAt(), kemudian tampilan akan diperbarui dengan setState() sehingga daftar itinerary pada Home Page langsung berkurang secara otomatis tanpa perlu refresh aplikasi.
 
 </div>
 
@@ -327,7 +346,7 @@ Melalui Mini Project ini, saya mempelajari:
 - 🔹 Implementasi filter data menggunakan **ChoiceChip**
 - 🔹 Pembuatan UI modern menggunakan **Container, Gradient, dan BoxDecoration**
 
-Project ini membantu saya memahami dasar pengembangan aplikasi mobile menggunakan Flutter secara lebih mendalam serta meningkatkan kemampuan dalam membangun aplikasi dengan struktur yang terorganisir.
+ 
 
 </details>
 
