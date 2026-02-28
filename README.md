@@ -113,8 +113,9 @@ Data kemudian akan dikirim kembali ke Home Page menggunakan Navigator.pop() dan 
 
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/98ca670c-1397-46bf-9fdb-eea956faaf87" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
-
+<img src="https://github.com/user-attachments/assets/bf183c95-42aa-4d0a-a37f-db9cface465e" 
+width="300" 
+style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
 <br><br>
 
 <b>Penjelasan:</b>  
@@ -145,7 +146,10 @@ Data lama akan otomatis terisi pada form karena menggunakan TextEditingControlle
 Halaman ini menampilkan daftar itinerary yang sudah ditambahkan. Setiap item ditampilkan dalam bentuk card yang berisi hari/tanggal, waktu, aktivitas, serta status perjalanan (Planned/Done).Untuk memperbarui data, pengguna dapat menekan icon pena (✏️) pada bagian kanan card. Data lama akan otomatis terisi di halaman form karena menggunakan TextEditingController dan diinisialisasi melalui initState(). Setelah perubahan disimpan, data akan diperbarui menggunakan setState() sehingga tampilan daftar langsung berubah tanpa perlu memuat ulang halaman.
 
 
-<img width="524" height="599" alt="image" src="https://github.com/user-attachments/assets/7875c108-3c98-4b54-9221-b384a1bb762d" />
+<img src="https://github.com/user-attachments/assets/7875c108-3c98-4b54-9221-b384a1bb762d" 
+width="300" 
+style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
 
 <br><br>
 
@@ -168,6 +172,9 @@ Setelah melakukan edit dan klik simpan, daftar akan berubah sesuai input yang di
 <div align="center">
 
 <img src="https://github.com/user-attachments/assets/38bbabf6-a470-451f-921c-b328d007e057" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+<img src="https://github.com/user-attachments/assets/3ff56c5e-4c32-4785-945e-9b6e6b968a54" 
+width="300" 
+style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
 
 <br><br>
 
@@ -184,21 +191,72 @@ Fitur delete memungkinkan pengguna menghapus itinerary yang sudah tidak diperluk
 ---
 
 <details>
+  
 <summary>🔎 6. Filter Status (All / Planned / Done)</summary>
 
 <br>
 
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/9f7e62c2-9905-4eb1-88ca-4b93a433747c" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+<!-- FILTER ALL -->
+<img src="https://github.com/user-attachments/assets/190b2b4e-91cf-4ce1-9a05-587ef68849c6" 
+width="300" 
+style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
 
 <br><br>
 
-<b>Penjelasan:</b>  
-Filter menggunakan ChoiceChip untuk memisahkan itinerary berdasarkan status.  
-Filtering dilakukan dengan method getFilteredList().
+<b>Filter: All</b><br>
+Menampilkan seluruh itinerary tanpa memfilter status.<br>
+Semua data dengan status <b>Planned</b> maupun <b>Done</b> akan ditampilkan.
+
+<br><br><br>
+
+<!-- FILTER PLANNED -->
+<img src="https://github.com/user-attachments/assets/fdcbaea4-63e7-465f-a5a8-aa11a245f7a1" 
+width="300" 
+style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Filter: Planned</b><br>
+Menampilkan itinerary dengan status <b>Planned</b> saja.<br>
+Fitur ini membantu pengguna melihat daftar perjalanan yang masih direncanakan.
+
+<br><br><br>
+
+<!-- FILTER DONE -->
+<img src="https://github.com/user-attachments/assets/d72c97af-152b-4391-a3e7-ceaa71dde7d5" 
+width="300" 
+style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Filter: Done</b><br>
+Menampilkan itinerary yang sudah selesai dilakukan.<br>
+Pengguna dapat dengan mudah memisahkan perjalanan yang telah selesai dari yang masih direncanakan.
+
+<br><br><br>
+
+<!-- UPDATE STATUS -->
+
+<br><br>
+
+<b>Update Status Itinerary</b><br>
+Ketika pengguna mengedit itinerary dan mengubah status menjadi <b>Planned</b> atau <b>Done</b>,<br>
+data akan diperbarui menggunakan <code>setState()</code> dan langsung menyesuaikan dengan filter yang aktif.<br>
+Dengan demikian, pengguna dapat melihat perubahan status secara real-time tanpa perlu memuat ulang halaman.
 
 </div>
+
+<br>
+
+<b>Implementasi Teknis:</b><br>
+
+- Filter menggunakan widget <code>ChoiceChip</code>  
+- Proses penyaringan data dilakukan melalui method <code>getFilteredList()</code>  
+- Pembaruan tampilan menggunakan <code>setState()</code>  
+- List ditampilkan menggunakan <code>ListView.builder</code>  
 
 </details>
 
@@ -242,7 +300,7 @@ Aplikasi Travel Itinerary ini memiliki fitur sebagai berikut:
   Data itinerary yang sudah ada dapat diperbarui menggunakan fitur edit.
 
 - ✅ **Hapus Itinerary**  
-  Itinerary dapat dihapus dari daftar dengan tombol delete.
+  Itinerary dapat dihapus dari daftar dengan tombol icon tempat sampah (hapus).
 
 - ✅ **Filter Berdasarkan Status**  
   Menggunakan ChoiceChip untuk memfilter data berdasarkan:
