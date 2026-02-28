@@ -11,8 +11,6 @@
 
 ![Flutter](https://img.shields.io/badge/Framework-Flutter-02569B?style=for-the-badge&logo=flutter)
 ![Dart](https://img.shields.io/badge/Language-Dart-0175C2?style=for-the-badge&logo=dart)
-![UI Design](https://img.shields.io/badge/UI-Modern%20Design-FFBF69?style=for-the-badge)
-![Project](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 </div>
 
@@ -37,7 +35,9 @@
 
 ## 🌟 Overview
 
-Travel Itinerary App adalah aplikasi mobile berbasis Flutter yang membantu pengguna mengatur dan mengelola rencana perjalanan dengan lebih terstruktur.
+Saat traveling, banyak orang sering merasa jadwalnya berantakan dan bingung menentukan tujuan karena tidak terorganisir dengan baik. Biasanya rencana perjalanan hanya ditulis di buku kecil atau notes biasa yang kurang praktis.
+
+Travel Itinerary App dibuat untuk membantu pengguna mengatur rencana perjalanan dengan lebih mudah dan terstruktur. Pengguna cukup menambahkan daftar itinerary, mengubah status jika sudah planned atau selesai, dan semua data dapat dilihat dengan tampilan yang rapi serta mudah dipahami.
 
 Fitur utama aplikasi ini meliputi:
 - Menambahkan itinerary
@@ -68,6 +68,11 @@ Aplikasi ini menerapkan konsep StatefulWidget, StatelessWidget, Navigator, dan m
 <b>Penjelasan:</b>  
 Halaman utama menampilkan daftar itinerary yang telah ditambahkan.  
 Terdapat header dengan gradient warna, filter status menggunakan ChoiceChip, serta Floating Action Button untuk menambah itinerary baru.
+
+Halaman ini merupakan Home Page dari aplikasi. Pada halaman ini nantinya akan ditampilkan daftar itinerary yang telah ditambahkan oleh pengguna menggunakan ListView.builder.
+Tersedia fitur filter status menggunakan ChoiceChip untuk menampilkan itinerary berdasarkan kategori All, Planned, atau Done.
+Untuk menambahkan itinerary baru, pengguna dapat menekan tombol + di pojok kanan bawah yang dibuat menggunakan FloatingActionButton, lalu akan diarahkan ke halaman form menggunakan Navigator.push().
+Tampilan header menggunakan Container dengan BoxDecoration dan LinearGradient untuk memberikan kesan modern pada aplikasi.
 
 </div>
 
@@ -182,6 +187,9 @@ Filtering dilakukan dengan method getFilteredList().
 
 # 🗂 Struktur Folder Project
 
+<details>
+<summary>🚀 Klik untuk melihat struktur folder</summary>
+
 ```bash
 lib/
 │
@@ -195,6 +203,8 @@ lib/
 │
 └── main.dart
 ```
+</details>
+
 ---
 
 # 🎯 Fitur Aplikasi
