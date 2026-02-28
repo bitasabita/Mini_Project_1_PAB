@@ -37,7 +37,6 @@
 ## 🌟 Overview
 
 Travel Itinerary App adalah aplikasi yang dirancang untuk membantu pengguna mengatur rencana perjalanan secara lebih terstruktur dan efisien.
-
 Saat melakukan perjalanan, banyak orang mengalami kesulitan dalam menyusun jadwal karena perencanaan yang kurang terorganisir. Umumnya, itinerary hanya dicatat pada buku kecil atau aplikasi catatan sederhana yang kurang praktis dan tidak terstruktur dengan baik.
 
 Aplikasi ini hadir sebagai solusi dengan menyediakan fitur pengelolaan itinerary yang mudah digunakan, sehingga pengguna dapat menyusun, mengelola, dan memantau rencana perjalanan mereka dalam satu tampilan yang rapi dan informatif.
