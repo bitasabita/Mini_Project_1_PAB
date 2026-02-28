@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # ✈️ Mini_Project_1_PAB  
@@ -19,7 +18,7 @@
 
 ---
 
-# 👩‍💻 Created By:
+# 👩‍💻 Created By
 
 <div align="center">
 
@@ -38,27 +37,146 @@
 
 ## 🌟 Overview
 
-Travel Itinerary App adalah aplikasi mobile berbasis **Flutter** yang dirancang untuk membantu pengguna dalam menyusun dan mengelola rencana perjalanan secara terorganisir dan interaktif.
+Travel Itinerary App adalah aplikasi mobile berbasis Flutter yang membantu pengguna mengatur dan mengelola rencana perjalanan dengan lebih terstruktur.
 
-Aplikasi ini memungkinkan pengguna untuk mencatat jadwal perjalanan lengkap dengan tanggal, waktu, aktivitas, serta status perjalanan (Planned atau Done). Dengan sistem filtering dan navigasi antar halaman, pengguna dapat mengelola itinerary dengan lebih efisien.
+Fitur utama aplikasi ini meliputi:
+- Menambahkan itinerary
+- Mengedit itinerary
+- Menghapus itinerary
+- Melihat detail itinerary
+- Memfilter berdasarkan status (All, Planned, Done)
 
-Aplikasi dikembangkan menggunakan konsep:
-
-- 🔹 Stateful & Stateless Widget
-- 🔹 Navigasi antar halaman (Navigator.push & pop)
-- 🔹 Manajemen state menggunakan setState()
-- 🔹 Dynamic List dengan ListView.builder
-- 🔹 UI Modern dengan Gradient dan Custom Styling
+Aplikasi ini menerapkan konsep StatefulWidget, StatelessWidget, Navigator, dan manajemen state menggunakan setState().
 
 ---
 
-# 🎨 Tampilan Aplikasi
+# 🎨 Dokumentasi Tampilan Aplikasi
 
-📸 TARO SCREENSHOT HOMEPAGE DI SINI  
+---
 
-📸 TARO SCREENSHOT FORM PAGE DI SINI  
+<details>
+<summary>🏠 1. Tampilan Home Page</summary>
 
-📸 TARO SCREENSHOT DETAIL PAGE DI SINI  
+<br>
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/be5058b7-cb09-4031-9993-e3e810deec33" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Penjelasan:</b>  
+Halaman utama menampilkan daftar itinerary yang telah ditambahkan.  
+Terdapat header dengan gradient warna, filter status menggunakan ChoiceChip, serta Floating Action Button untuk menambah itinerary baru.
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>📝 2. Tampilan Form Tambah Itinerary</summary>
+
+<br>
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/a5d65a82-0eb5-437e-b13b-564878504ffb" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Penjelasan:</b>  
+Halaman ini digunakan untuk menginput data itinerary.  
+Menggunakan TextField untuk tanggal, waktu, aktivitas dan DropdownButtonFormField untuk memilih status perjalanan.
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>📄 3. Tampilan Detail Itinerary</summary>
+
+<br>
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/98ca670c-1397-46bf-9fdb-eea956faaf87" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Penjelasan:</b>  
+Halaman detail menampilkan informasi lengkap dari itinerary yang dipilih.  
+Data dikirim dari HomePage melalui Navigator.push().
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>✏️ 4. Fitur Edit Itinerary</summary>
+
+<br>
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/b116d861-8adc-4a2a-bd4f-c9390531efbf" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Penjelasan:</b>  
+Fitur edit memungkinkan pengguna memperbarui data itinerary yang sudah ada.  
+Data lama akan otomatis terisi pada form karena menggunakan TextEditingController dan initState().
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>🗑️ 5. Fitur Delete Itinerary</summary>
+
+<br>
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/38bbabf6-a470-451f-921c-b328d007e057" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Penjelasan:</b>  
+Fitur delete memungkinkan pengguna menghapus itinerary dari daftar.  
+Data dihapus dari List menggunakan removeAt() dan tampilan diperbarui dengan setState().
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>🔎 6. Filter Status (All / Planned / Done)</summary>
+
+<br>
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/9f7e62c2-9905-4eb1-88ca-4b93a433747c" width="300" style="border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+
+<br><br>
+
+<b>Penjelasan:</b>  
+Filter menggunakan ChoiceChip untuk memisahkan itinerary berdasarkan status.  
+Filtering dilakukan dengan method getFilteredList().
+
+</div>
+
+</details>
 
 ---
 
@@ -76,76 +194,138 @@ lib/
 │   └── detail_page.dart
 │
 └── main.dart
+```
+---
 
-## 🎯 Fitur Aplikasi
+# 🎯 Fitur Aplikasi
 
 <details>
-<summary>🚀 Klik untuk melihat fitur</summary>
+<summary>🚀 Klik untuk melihat fitur aplikasi</summary>
 
-Berikut fitur yang tersedia dalam aplikasi:
+<br>
 
-- ✅ Tambah itinerary baru
-- ✅ Edit itinerary
-- ✅ Hapus itinerary
-- ✅ Filter itinerary berdasarkan status
-- ✅ Tampilan detail itinerary
-- ✅ Snackbar notifikasi saat menyimpan data
-- ✅ Tampilan modern dengan gradient header
-- ✅ Floating Action Button untuk tambah data
+Aplikasi Travel Itinerary ini memiliki fitur sebagai berikut:
+
+- ✅ **Tambah Itinerary Baru**  
+  Pengguna dapat menambahkan rencana perjalanan melalui Form Page.
+
+- ✅ **Edit Itinerary**  
+  Data itinerary yang sudah ada dapat diperbarui menggunakan fitur edit.
+
+- ✅ **Hapus Itinerary**  
+  Itinerary dapat dihapus dari daftar dengan tombol delete.
+
+- ✅ **Filter Berdasarkan Status**  
+  Menggunakan ChoiceChip untuk memfilter data berdasarkan:
+  - All
+  - Planned
+  - Done
+
+- ✅ **Detail Itinerary**  
+  Menampilkan informasi lengkap dari itinerary yang dipilih.
+
+- ✅ **Snackbar Notifikasi**  
+  Menampilkan notifikasi ketika data berhasil disimpan.
+
+- ✅ **UI Modern dengan Gradient Header**  
+  Tampilan menggunakan kombinasi warna Dark Blue, Tosca, dan Soft Orange.
 
 </details>
 
 ---
 
-## 🧩 Widget yang Digunakan
+# 🧩 Widget yang Digunakan
 
 <details>
 <summary>🛠 Klik untuk melihat daftar widget</summary>
 
-Berikut widget yang digunakan dalam project ini:
+<br>
 
+Berikut adalah widget yang digunakan dalam pengembangan aplikasi ini:
+
+### 📌 Root & Struktur Dasar
 - `MaterialApp`
 - `Scaffold`
-- `AppBar`
 - `SafeArea`
+
+### 📌 Layouting
 - `Column`
 - `Row`
 - `Container`
-- `Text`
-- `Icon`
-- `IconButton`
-- `FloatingActionButton`
+- `Padding`
+- `SizedBox`
+- `Expanded`
+
+### 📌 List & Interaksi
 - `ListView.builder`
 - `GestureDetector`
-- `SnackBar`
-- `ChoiceChip`
-- `DropdownButtonFormField`
+- `FloatingActionButton`
+- `IconButton`
+
+### 📌 Input & Form
 - `TextField`
-- `SizedBox`
-- `Padding`
-- `Expanded`
-- `SingleChildScrollView`
+- `DropdownButtonFormField`
+- `TextEditingController`
+
+### 📌 Navigasi & State
 - `Navigator`
 - `StatefulWidget`
 - `StatelessWidget`
+- `setState()`
 
 </details>
 
 ---
 
-# 🧠 Penjelasan Struktur dan Implementasi Kode
+# 📲 Cara Menggunakan Aplikasi
+
+<details>
+<summary>✨ Klik untuk melihat cara penggunaan</summary>
+
+<br>
+
+Berikut langkah-langkah penggunaan aplikasi:
+
+1️⃣ Buka aplikasi  
+2️⃣ Tekan tombol ➕ pada pojok kanan bawah  
+3️⃣ Isi data itinerary (Tanggal, Waktu, Aktivitas)  
+4️⃣ Pilih status perjalanan (Planned / Done)  
+5️⃣ Klik tombol **Simpan**  
+6️⃣ Data akan muncul pada halaman utama  
+7️⃣ Gunakan filter (All / Planned / Done) jika ingin menyaring data  
+8️⃣ Klik salah satu itinerary untuk melihat detail  
+9️⃣ Gunakan tombol Edit atau Delete sesuai kebutuhan  
+
+</details>
 
 ---
 
-## 📦 1. Model Data (itinerary_model.dart)
+# 📌 Kesimpulan
 
 <details>
-<summary>📌 Klik untuk melihat penjelasan model</summary>
+<summary>📖 Klik untuk melihat kesimpulan</summary>
 
-```dart
-class Itinerary {
-  String tanggal;
-  String waktu;
-  String aktivitas;
-  String status;
-}
+<br>
+
+Melalui Mini Project ini, saya mempelajari:
+
+- 🔹 Penggunaan **StatefulWidget & StatelessWidget**
+- 🔹 Navigasi antar halaman menggunakan **Navigator.push() & pop()**
+- 🔹 Manajemen state menggunakan **setState()**
+- 🔹 Implementasi dynamic list dengan **ListView.builder**
+- 🔹 Penggunaan **TextEditingController** untuk form input
+- 🔹 Implementasi filter data menggunakan **ChoiceChip**
+- 🔹 Pembuatan UI modern menggunakan **Container, Gradient, dan BoxDecoration**
+
+Project ini membantu saya memahami dasar pengembangan aplikasi mobile menggunakan Flutter secara lebih mendalam serta meningkatkan kemampuan dalam membangun aplikasi dengan struktur yang terorganisir.
+
+</details>
+
+---
+
+<div align="center">
+
+✨ Terima kasih telah melihat dokumentasi project ini ✨  
+💙 Mini_Project_1_PAB - Travel Itinerary App 💙
+
+</div>
